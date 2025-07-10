@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 265 89% 58%; /* Purple - 7C3AED */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 265 89% 92%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 265 89% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 265 89% 58%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 265 89% 92%;
+    --sidebar-primary-foreground: 265 89% 28%;
+    --sidebar-accent: 265 89% 48%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 265 89% 68%;
+    --sidebar-ring: 265 89% 58%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-[Roboto];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .campus-card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .campus-button {
+    @apply rounded-lg py-2 px-4 font-medium transition-all duration-200;
+  }
+
+  .campus-input {
+    @apply border rounded-lg p-2 outline-none focus:ring-2;
+  }
+
+  .campus-transition {
+    @apply transition duration-300 ease-in-out;
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
